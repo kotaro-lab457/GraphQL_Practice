@@ -1,4 +1,5 @@
-#　概要
+# 概要
+
 Vue, Expressを通じてGraphOLを学習。
 
 ## 開発サーバー
