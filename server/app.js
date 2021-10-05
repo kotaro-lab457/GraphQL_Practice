@@ -3,6 +3,7 @@ const { graphqlHTTP } = require('express-graphql');
 const mongoose = require('mongoose');
 const schema = require('./schema/schema');
 const app = express();
+const cors = require('cors');
 
 require('dotenv').config();
 
@@ -11,6 +12,10 @@ mongoose.connect(process.env.DB_PATH);
 mongoose.connection.once('open', () => {
   console.log('mongoDB 接続完了');
 })
+
+// 異なるドメイン下での許可
+app.use(cors());
+
 app.use('/graphql', graphqlHTTP({
   // スキーマの定義
   schema,
