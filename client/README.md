@@ -9,10 +9,10 @@ npm install
 
 ### 開発サーバーの立ち上げ
 ```
-npm run serve
+npm start
 ```
 
-Local: http://localhost:8000/
+Local: http://localhost:8080/
 
 ### 本番ビルド
 ```
